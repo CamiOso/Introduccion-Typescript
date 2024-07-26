@@ -16,11 +16,31 @@ function multiply(firstNumber:number,base:number,secondNumber?:number,){
 
 }
 
-const multi=multiply(2,3);
-console.log(multi);
 
-const result:number=addNumbers(1,2);
-console.log(result);
+interface Character{
+    name:string;
+    hp:number;
+    showHp:()=>void;
+
+}
+
+ const healCharacter=(character:Character,amount:number)=>{
+    character.hp+=amount;
+
+
+
+ }
+
+ const strider:Character= {
+    name:'Strider',
+    hp:100,
+    showHp(){
+        console.log(`HP: ${this.hp}`);
+    }
+
+ }
+
+strider.showHp();
 
 
 export {};
